@@ -4,14 +4,15 @@ Hooks are a recent addition to React that allow function components to access li
 
 ### Before hooks
 
-- Before React.js hooks, programmers had to design their components as either class components or function components. Function components are pure JavaScript functions, whereas class components allow you to access lifecycle methods and require you to define a `render()` method.
-- The introduction of hooks makes class components obsolete (but they are still supported by the React team!).
+Before React.js hooks, programmers had to choose between classes or functions when designing components. Class components allow you to access lifecycle methods and other features, whereas function components are pure JavaScript functions. However, the introduction of hooks has made class components obsolete because we can now do everything with just function components.
+
+> Note: Even though the use case for class components has diminished, they are still supported by the React.js development team and there is no hard rule saying that we can't use class components anymore. Many organizations still use class components in their codebases.
 
 ### Why should we use hooks?
 
-- Adds lifecycle methods, state, and other React features to function components
-- Hooks are backwards-compatible
-- Eliminates the need to write class components
+- Hooks allow us to access powerful features in function components, like lifecycle methods, state, refs, context, and more.
+- Hooks are backwards-compatible, so they won't break your old React code.
+- Hooks eliminate the need to write class components.
 
 ---
 
