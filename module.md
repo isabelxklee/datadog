@@ -18,23 +18,21 @@ Before React.js hooks, programmers had to choose between classes or functions wh
 
 ## The state hook
 
-The first hook that we’re going to look at is the state hook. The state hook allows function components to store and update local state. `useState()` returns a pair: the current state value and its function to update it.
-
-Let’s take a look at the state hook’s syntax.
+Let's talk about the state hook. The state hook allows function components to store and update local state. This hook returns a pair: the current state value and its function to update it.
 
 ```jsx
 const [stateVariable, updatingFunction] = useState(initialValue);
 ```
 
-As you can see, we’re calling `useState()` and defining our state variable and its updating function. We’re also defining an initial state value with `initialValue`. The initial value can be…
+Let’s break down this syntax.
 
-Breaking down the State hook syntax
+- We’re calling `useState()` and defining our state variable and its updating function.
+- We’re also defining an initial value that our state variable will hold. This initial value is quite flexible and can be any data type; it doesn't necessarily have to be an object.
+- The state hook uses array destructuring, which allows us to name our own state variables. This is why `stateVariable` and `updatingFunction` are styled as `[stateVariable, updatingFunction]`. Otherwise, we'd be dealing with `[0]` and `[1]` to refer to the state's current value and the function to update it, and that might get confusing.
 
-- The State hook uses array destructuring, which allows us to name our own state variables
-- The State hook is a function that returns a pair, which is an array with 2 items
-- Otherwise, we'd be dealing with `[0]` and `[1]` to refer to the state's current value and the function to update it, and that might get confusing
+## A simple example
 
-Now, let’s take a look at an example of how we could use the state hook. Let’s say we want to build a toggle that allows us to switch between dark mode and light mode on a website. We could store this value in a state variable and create an HTML element that allows us to update its value.
+Now, let’s take a look at an example of how we could use the state hook. Let’s say we want to build a toggle that allows us to switch between dark mode and light mode on a website. We could store this value in a state variable and create a DOM element that allows us to update its value.
 
 1. First, we need to import the state hook in order to use it.
 
@@ -68,17 +66,31 @@ return {
 
 > **Note:** You can add `console.log(darkMode)` to see `darkMode`’s value getting updated.
 
-You can also store more than one state variable in a component. For example, if you wanted to track… you could call `useState()` and define your new variable.
+You can also store more than one state variable in a component. You can simply call `useState()` and define your new variable below `darkMode`.
 
 ```jsx
 const [darkMode, setDarkMode] = useState(false);
-const [trackSomething, setTrackSomething] = useState(null);
+const [storeSomething, setStoreSomething] = useState(null);
 ```
 
-**[Show entire file]**
+Now, here's what our entire `DarkMode` component looks like:
 
 ```jsx
+import React, { useState } from "react";
 
+const DarkMode = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  console.log(darkMode);
+
+  return (
+    <>
+      <button onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</button>
+    </>
+  );
+};
+
+export default DarkMode;
 ```
 
 **[Talk about what we just did and why we did it.]**
