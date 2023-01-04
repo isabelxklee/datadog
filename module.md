@@ -33,7 +33,6 @@ Breaking down the State hook syntax
 - The State hook uses array destructuring, which allows us to name our own state variables
 - The State hook is a function that returns a pair, which is an array with 2 items
 - Otherwise, we'd be dealing with `[0]` and `[1]` to refer to the state's current value and the function to update it, and that might get confusing
-- Source: [https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean)
 
 Now, let’s take a look at an example of how we could use the state hook. Let’s say we want to build a toggle that allows us to switch between dark mode and light mode on a website. We could store this value in a state variable and create an HTML element that allows us to update its value.
 
@@ -78,7 +77,18 @@ const [trackSomething, setTrackSomething] = useState(null);
 
 **[Show entire file]**
 
+```jsx
+
+```
+
 **[Talk about what we just did and why we did it.]**
+
+---
+
+## Resources
+
+- [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
+- [Tip: What Do Square Brackets Mean?](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean)
 
 ---
 
