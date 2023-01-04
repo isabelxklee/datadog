@@ -6,7 +6,6 @@ This module will cover the following:
 
 - Intro to hooks
 - The state hook
-- The effect hook
 - Self-directed activities
 
 > Note: You can find all the code used in this module in the `react-app` folder.

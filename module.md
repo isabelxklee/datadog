@@ -1,6 +1,6 @@
 # Intro to Hooks
 
-Hooks are a recent addition to React that allow function components to access lifecycle methods. They are Javascript functions with special rules.
+Hooks are a recent addition that superpower function components and allow them to access lifecycle methods and other functionalities.
 
 ### Before hooks
 
@@ -13,6 +13,7 @@ Before React.js hooks, programmers had to choose between classes or functions wh
 - Hooks allow us to access powerful features in function components, like lifecycle methods, state, refs, context, and more.
 - Hooks are backwards-compatible, so they won't break your old React code.
 - Hooks eliminate the need to write class components.
+- Hooks allow us to reuse and extract stateful logic from a component without changing component hierarchy.
 
 ---
 
@@ -112,7 +113,7 @@ Now it’s time to practice our newfound knowledge! Create your own React functi
 
 Let's look at an example where updating the state variable is slightly more complex.
 
-We're going to build a feature where we have a list of good dogs. We can add and remove dogs from this list by clicking on a button. The list shouldn’t have any duplicates.
+We're going to build a feature where we have a list of good dogs. We can add dogs to this list by clicking on a button. The list shouldn’t have any duplicates.
 
 1. Create a new function component and import the state hook at the top of the file. Define a new state variable called `goodDogs`. The initial state for `goodDogs` is going to be an empty array `[]`.
 
@@ -201,6 +202,17 @@ return (
 ```
 
 7. Now, when we click on the "Add" button under each dog, it should get added to the `goodDogs` list.
+
+---
+
+## ⭐️ Self-directed activity ⭐️
+
+Let's keep going and expand this feature. Write some logic that removes a dog from the `goodDogs` list.
+
+Here are 2 options for implementing this feature:
+
+1. Create a "Remove" button that removes a dog from the list.
+2. Clicking on the "Add" button again removes the dog.
 
 ---
 
