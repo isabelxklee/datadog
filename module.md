@@ -187,21 +187,35 @@ const handleClick = (dog) => {
 6. In the component's return statement, add `onClick()` event handlers to each `button`. Since the dog data is hardcoded, call `handleClick()` and pass in each dog’s name as a string.
 
 ```jsx
-return (
-  <>
-    <p>Felix</p>
-    <button onClick={() => handleClick("Felix")}>Add</button>
+import React, { useState } from "react";
 
-    <p>Odie</p>
-    <button onClick={() => handleClick("Odie")}>Add</button>
+const GoodDogs = () => {
+  const [goodDogs, setGoodDogs] = useState([]);
 
-    <p>Bingo</p>
-    <button onClick={() => handleClick("Bingo")}>Add</button>
-  </>
-);
+  const handleClick = (dog) => {
+    if (!goodDogs.includes(dog)) {
+      return setGoodDogs(() => [...goodDogs, dog]);
+    }
+  };
+
+  return (
+    <>
+      <p>Felix</p>
+      <button onClick={() => handleClick("Felix")}>Add</button>
+
+      <p>Odie</p>
+      <button onClick={() => handleClick("Odie")}>Add</button>
+
+      <p>Bingo</p>
+      <button onClick={() => handleClick("Bingo")}>Add</button>
+    </>
+  );
+};
+
+export default GoodDogs;
 ```
 
-7. Now, when we click on the "Add" button under each dog, it should get added to the `goodDogs` list.
+Now, when we click on the "Add" button under each dog, it should get added to the `goodDogs` list. As you can see, we can use helper functions to write more complex operations for updating state variables.
 
 ---
 
