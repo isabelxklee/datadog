@@ -8,13 +8,9 @@ This module will cover the following:
 - The state hook
 - Self-directed activities
 
-> Note: You can find all the code used in this module in the `react-app` folder.
-
----
+You can find all the code used in this module in the `react-app` folder.
 
 ⏰ The estimated time commitment for this module is **30-45 mins**.
-
----
 
 ## Intended audience
 
