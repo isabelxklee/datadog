@@ -30,7 +30,7 @@ Let’s break down this syntax.
 - We’re also defining an initial value that our state variable will hold. This initial value is quite flexible and can be any data type; it doesn't necessarily have to be an object.
 - The state hook uses array destructuring, which allows us to name our own state variables. This is why `stateVariable` and `updatingFunction` are styled as `[stateVariable, updatingFunction]`. Otherwise, we'd be dealing with `[0]` and `[1]` to refer to the state's current value and the function to update it, and that might get confusing.
 
-## A simple example
+## Dark Mode Example
 
 Now, let’s take a look at an example of how we could use the state hook. Let’s say we want to build a toggle that allows us to switch between dark mode and light mode on a website. We could store this value in a state variable and create a DOM element that allows us to update its value.
 
@@ -80,23 +80,15 @@ export default DarkMode;
 
 > **Note:** You can add `console.log(darkMode)` to see `darkMode`’s value getting updated whenever you click the button.
 
-You can also store more than one state variable in a component. You can call `useState()` multiple times in a co mponentand define your new variable.
+You can also store more than one state variable in a component. You can call `useState()` multiple times in a component and define your new variable.
 
-Example:
+Here's an example:
 
 ```jsx
 const [darkMode, setDarkMode] = useState(false);
 const [storeSomething, setStoreSomething] = useState(null);
+const [counter, setCounter] = useState(0);
 ```
-
-**[Talk about what we just did and why we did it.]**
-
----
-
-## Resources
-
-- [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
-- [Tip: What Do Square Brackets Mean?](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean)
 
 ---
 
@@ -194,11 +186,7 @@ Now, when we click on each dog’s name, …
 
 ---
 
-## Self-directed activity
+## Resources
 
-Now it’s time to practice! Use this [default React sandbox](https://codesandbox.io/s/trusting-flower-b897nv) to …
-
-1. In the `src` folder, create a new file called …
-2. Define your function component and import the `useState` hook at the top of the file.
-3. Create a new state variable.
-4. Create an HTML element that updates the state variable’s value.
+- [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
+- [Tip: What Do Square Brackets Mean?](https://reactjs.org/docs/hooks-state.html#tip-what-do-square-brackets-mean)
