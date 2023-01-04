@@ -58,17 +58,21 @@ export default DarkMode;
 
 > **Note:** This new state variable is local to our component – if we wanted to use it in other components, we could pass it down as a prop.
 
-3. Let’s create an HTML element that toggles the dark mode value. We’re going to create a `button` element in the return function of our component. Then we’re going to use the `button`'s `onClick()` event handler and call the state variable’s updating function, `setDarkMode()`. The argument that we’re passing to `setDarkMode()` is going to be the opposite value of `darkMode`. Therefore, clicking on the “Toggle Dark Mode” button will change `darkMode` from `false` to `true` and vice versa.
+3. Now that we have our state variable set up, let’s create a DOM element that toggles the dark mode value. Create a `button` element in the return statement of the component. Use the `button`'s `onClick()` event handler to call the state variable’s updating function, `setDarkMode()`. The value passed to `setDarkMode()` is going to be the opposite of `darkMode`'s current. Therefore, clicking on the “Toggle Dark Mode” button will change `darkMode` from `false` to `true`, and vice versa.
 
 ```jsx
 return {
-	<>
-		<button onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</button>
-	</>
+  return (
+    <>
+      <button onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</button>
+    </>
+  );
 }
 ```
 
-> **Note:** You can add `console.log(darkMode)` to see `darkMode`’s value getting updated.
+> **Note:** You can add `console.log(darkMode)` to see `darkMode`’s value getting updated whenever you click the button.
+
+The next step in this feature...
 
 You can also store more than one state variable in a component. You can simply call `useState()` and define your new variable below `darkMode`.
 
