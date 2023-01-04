@@ -40,16 +40,20 @@ Now, let’s take a look at an example of how we could use the state hook. Let�
 import React, { useState } from "react";
 ```
 
-2. Now, we’re going to call `useState()` inside of a function component and set our state variable to `darkMode` and its updating function to `setDarkMode`. The initial state for `darkMode` is going to be `false`. This just means that the default setting is going to have dark mode turned off.
+2. Now, let's define our function component and call `useState()` inside of it. Define a state variable called `darkMode` and `setDarkMode` as its updating function. The initial state for `darkMode` is going to be `false`. This just means that dark mode is going to be turned off as the default setting.
 
-> **Note:** When writing an initial value, think about expected data type for the state value
-
-- If it's going to be an array of objects, initially set it to be an empty array
-- If it's an object, set it to `null`
-- If it's going to be a string, set it to an empty string
+> **Note:** When setting the initial value, consider what the expected data type will be for the state. For example, if you're expectring the state to hold a list of objects, you can set the initial value to be an empty array. Or if you're expecting an object, you can set it to `null`, etc.
 
 ```jsx
-const [darkMode, setDarkMode] = useState(false);
+import React, { useState } from "react";
+
+const DarkMode = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  return <></>;
+};
+
+export default DarkMode;
 ```
 
 > **Note:** This new state variable is local to our component – if we wanted to use it in other components, we could pass it down as a prop.
