@@ -42,7 +42,7 @@ import React, { useState } from "react";
 
 2. Now, let's define our function component and call `useState()` inside of it. Define a state variable called `darkMode` and `setDarkMode` as its updating function. The initial state for `darkMode` is going to be `false`. This just means that dark mode is going to be turned off as the default setting.
 
-> **Note:** When setting the initial value, consider what the expected data type will be for the state. For example, if you're expectring the state to hold a list of objects, you can set the initial value to be an empty array. Or if you're expecting an object, you can set it to `null`, etc.
+> **Note:** When setting the initial value, consider what the expected data type will be for the state. For example, if you're expecting the state to hold a list of objects, you can set the initial value to be an empty array. Or if you're expecting an object, you can set it to `null`, etc.
 
 ```jsx
 import React, { useState } from "react";
@@ -59,29 +59,6 @@ export default DarkMode;
 > **Note:** This new state variable is local to our component – if we wanted to use it in other components, we could pass it down as a prop.
 
 3. Now that we have our state variable set up, let’s create a DOM element that toggles the dark mode value. Create a `button` element in the return statement of the component. Use the `button`'s `onClick()` event handler to call the state variable’s updating function, `setDarkMode()`. The value passed to `setDarkMode()` is going to be the opposite of `darkMode`'s current. Therefore, clicking on the “Toggle Dark Mode” button will change `darkMode` from `false` to `true`, and vice versa.
-
-```jsx
-return {
-  return (
-    <>
-      <button onClick={() => setDarkMode(!darkMode)}>Toggle Dark Mode</button>
-    </>
-  );
-}
-```
-
-> **Note:** You can add `console.log(darkMode)` to see `darkMode`’s value getting updated whenever you click the button.
-
-The next step in this feature...
-
-You can also store more than one state variable in a component. You can simply call `useState()` and define your new variable below `darkMode`.
-
-```jsx
-const [darkMode, setDarkMode] = useState(false);
-const [storeSomething, setStoreSomething] = useState(null);
-```
-
-Now, here's what our entire `DarkMode` component looks like:
 
 ```jsx
 import React, { useState } from "react";
@@ -101,6 +78,17 @@ const DarkMode = () => {
 export default DarkMode;
 ```
 
+> **Note:** You can add `console.log(darkMode)` to see `darkMode`’s value getting updated whenever you click the button.
+
+You can also store more than one state variable in a component. You can call `useState()` multiple times in a co mponentand define your new variable.
+
+Example:
+
+```jsx
+const [darkMode, setDarkMode] = useState(false);
+const [storeSomething, setStoreSomething] = useState(null);
+```
+
 **[Talk about what we just did and why we did it.]**
 
 ---
@@ -114,12 +102,15 @@ export default DarkMode;
 
 ## Self-directed activity
 
-Now it’s time to practice! Use this [default React sandbox](https://codesandbox.io/s/trusting-flower-b897nv) to …
+Now it’s time to practice our newfound knowledge! Create your own React function component and design a couple state variables.
 
-1. In the `src` folder, create a new file called …
-2. Define your function component and import the `useState` hook at the top of the file.
-3. Create a new state variable.
-4. Create an HTML element that updates the state variable’s value.
+1. Clone down this repo by running `git clone`.
+2. Install the necessary packages in this default React app by changing directories to `react-app`. Then run `npm install`.
+3. Run `npm start` to start your React server.
+4. In the `react-app/src` folder, create a new file for your component.
+5. Define your function component and import the `useState` hook at the top of the file.
+6. Create a few state variables.
+7. Write some DOM elements that update the values for the state variables.
 
 ---
 
