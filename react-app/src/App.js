@@ -1,11 +1,13 @@
 import React from "react";
+import DarkMode from "./DarkMode";
 import GoodDogs from "./GoodDogs";
 
 const App = () => {
   return (
-    <div>
+    <>
+      <DarkMode />
       <GoodDogs />
-    </div>
+    </>
   );
 };
 
