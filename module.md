@@ -30,6 +30,8 @@ Let’s break down this syntax.
 - We’re also defining an initial value that our state variable will hold. This initial value is quite flexible and can be any data type; it doesn't necessarily have to be an object.
 - The state hook uses array destructuring, which allows us to name our own state variables. This is why `stateVariable` and `updatingFunction` are styled as `[stateVariable, updatingFunction]`. Otherwise, we'd be dealing with `[0]` and `[1]` to refer to the state's current value and the function to update it, and that might get confusing.
 
+---
+
 ## Dark Mode Example
 
 Now, let’s take a look at an example of how we could use the state hook. Let’s say we want to build a toggle that allows us to switch between dark mode and light mode on a website. We could store this value in a state variable and create a DOM element that allows us to update its value.
@@ -92,7 +94,7 @@ const [counter, setCounter] = useState(0);
 
 ---
 
-## Self-directed activity
+## ⭐️ Self-directed activity ⭐️
 
 Now it’s time to practice our newfound knowledge! Create your own React function component and design a couple state variables.
 
@@ -106,14 +108,24 @@ Now it’s time to practice our newfound knowledge! Create your own React functi
 
 ---
 
-Now let’s take a look at a slightly more complex example. What if we wanted the state variable to hold something … other than a boolean value?
+## Good Dogs Example
 
-Our state variable is going to store a list of good dogs. This list shouldn’t have any duplicate entries. Our component is going to return a list of dogs and each dog is going to have a button that allows us to add that dog to the list.
+Let's look at an example where updating the state variable is slightly more complex.
 
-1. Let’s import `useState()` and define a new state variable called `goodDogs`. The initial state for `goodDogs` is going to be an empty array `[]`.
+We're going to build a feature where we have a list of good dogs. We can add and remove dogs from this list by clicking on a button. The list shouldn’t have any duplicates.
+
+1. Create a new function component and import the state hook at the top of the file. Define a new state variable called `goodDogs`. The initial state for `goodDogs` is going to be an empty array `[]`.
 
 ```jsx
-const [goodDogs, setGoodDogs] = useState([]);
+import React, { useState } from "react";
+
+const GoodDogs = () => {
+  const [goodDogs, setGoodDogs] = useState([]);
+
+  return <></>;
+};
+
+export default GoodDogs;
 ```
 
 2. Define the HTML elements in the return statement.

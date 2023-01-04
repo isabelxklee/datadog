@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const GoodDogs = () => {
+  const [goodDogs, setGoodDogs] = useState([]);
+
   return (
-    <div>
+    <>
       <h1>hello world</h1>
-    </div>
+    </>
   );
 };
 
