@@ -171,7 +171,7 @@ const handleClick = (dog) => {
 };
 ```
 
-5. Now, since we don’t want any duplicate entries in the `goodDogs` array, let’s write some logic that compares the current `goodDogs` array against the `dog` variable that we’re passing in. We’re going to check if `dog` already exists in `goodDogs`. If it doesn’t, then we’re going to add it to the `goodDogs` array. If it does exist, then we’re not going to do anything.
+5. Now, since we don’t want any duplicate entries in the `goodDogs` array, let’s refactor our code and write some logic that compares the current `goodDogs` array to the `dog` variable. We’re going to check if `dog` already exists in `goodDogs`. If it doesn’t exist, then we’re going to add it to the `goodDogs` array. Otherwise, we’re not going to do anything.
 
 ```jsx
 const handleClick = (dog) => {
@@ -181,9 +181,9 @@ const handleClick = (dog) => {
 };
 ```
 
-> **Note:** If you wanted confirmation that `dog` already exists in the array, you could add an `else` statement print a message to the console, like “already exists!”.
+> **Note:** If you wanted to print a message that `dog` already exists in the array, you could add an `else` statement and write a `console.log()` statement, like “this dog already exists!”.
 
-6. Back in our return statement, let’s add an `onClick()` event handler to each of our `button` elements. Since our dog data is hardcoded, we’re going to call `handleClick()` and just pass in each dog’s name as a string.
+6. In the component's return statement, add `onClick()` event handlers to each `button`. Since the dog data is hardcoded, call `handleClick()` and pass in each dog’s name as a string.
 
 ```jsx
 return (
@@ -200,7 +200,7 @@ return (
 );
 ```
 
-Now, when we click on each dog’s name, …
+7. Now, when we click on the "Add" button under each dog, it should get added to the `goodDogs` list.
 
 ---
 
