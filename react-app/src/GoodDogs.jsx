@@ -3,9 +3,20 @@ import React, { useState } from "react";
 const GoodDogs = () => {
   const [goodDogs, setGoodDogs] = useState([]);
 
+  const handleClick = (dog) => {
+    return;
+  };
+
   return (
     <>
-      <h1>hello world</h1>
+      <p>Felix</p>
+      <button>Add</button>
+
+      <p>Odie</p>
+      <button>Add</button>
+
+      <p>Bingo</p>
+      <button>Add</button>
     </>
   );
 };

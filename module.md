@@ -128,26 +128,32 @@ const GoodDogs = () => {
 export default GoodDogs;
 ```
 
-2. Define the HTML elements in the return statement.
-
-> **Note:** for now, we’re just going to hardcode our list of dogs. A more realistic use case might show us fetching the list of good dogs from an API and populating the HTML elements from that data.
+2. Create some DOM elements in the component's return statement. For now, we’re going to hardcode our list of dogs. However, a more realistic use case might have us fetching this data from an API.
 
 ```jsx
-return {
-	<>
-		<p>Felix</p>
-		<button>Add</button>
+import React, { useState } from "react";
 
-		<p>Odie</p>
-		<button>Add</button>
+const GoodDogs = () => {
+  const [goodDogs, setGoodDogs] = useState([]);
 
-		<p>Bingo</p>
-		<button>Add</button>
-	</>
-}
+  return (
+    <>
+      <p>Felix</p>
+      <button>Add</button>
+
+      <p>Odie</p>
+      <button>Add</button>
+
+      <p>Bingo</p>
+      <button>Add</button>
+    </>
+  );
+};
+
+export default GoodDogs;
 ```
 
-3. Every time the “Add” button gets clicked, the corresponding dog is going to get pushed to the `goodDogs` array. Instead of just calling `goodDogs`'s updating function, `setGoodDogs()` in the `onClick()` event handler, let’s define a helper function. We’re going to call this `handleClick()` and the argument that we’re passing in is going to be called `dog`.
+3. Every time the “Add” button gets clicked for a dog, that corresponding dog should get added to the `goodDogs` array. In our last example, we simply called the state variable's updating function inside the `onClick()` event handler, but this time we're going to define a separate helper function. We’re going to call this function `handleClick()` and the argument that we’re passing in is going to be called `dog`.
 
 ```jsx
 const handleClick = (dog) => {
@@ -155,9 +161,9 @@ const handleClick = (dog) => {
 };
 ```
 
-4. Inside `handleClick()`, we’re going to call `setGoodDogs()` and push `dog` into the `goodDogs` array.
+4. Inside `handleClick()`, call `setGoodDogs()` and push `dog` into the `goodDogs` array.
 
-> **Note:** Since we’re using the previous value of `goodDogs` in this function, we’re going to call `setGoodDogs()` as a callback. We’re also using the spread operator `(…)` to …
+> **Note:** Since we’re using the previous value of `goodDogs` in this function, we’re going to write `setGoodDogs()` as a callback.
 
 ```jsx
 const handleClick = (dog) => {
